@@ -1,6 +1,6 @@
-# React
+# Casa Mosaiko Sonsón
 
-A modern React-based project utilizing the latest frontend technologies and tools for building responsive web applications.
+Una aplicación web moderna para Casa Mosaiko Sonsón, un hospedaje único en el corazón de Antioquia. Desarrollada con React y las últimas tecnologías frontend para ofrecer una experiencia de usuario excepcional.
 
 ## 🚀 Features
 
@@ -92,11 +92,42 @@ The app is built with responsive design using Tailwind CSS breakpoints.
 
 ## 📦 Deployment
 
-Build the application for production:
+### Desarrollo Local
+
+Para ejecutar el proyecto en modo desarrollo:
+
+```bash
+npm start
+```
+
+### Build de Producción
+
+Para compilar la aplicación para producción:
 
 ```bash
 npm run build
 ```
+
+### Despliegue
+
+El proyecto está configurado para despliegue en Netlify. Los archivos de configuración incluyen:
+
+- `netlify.toml` - Configuración de build y headers
+- `public/_redirects` - Configuración de rutas para SPA
+
+Para desplegar:
+
+1. Conecta tu repositorio a Netlify
+2. El build se ejecutará automáticamente con `npm run build`
+3. Los archivos se servirán desde la carpeta `dist`
+
+### Optimizaciones Incluidas
+
+- ✅ Fuentes sans-serif (Inter) para mejor legibilidad
+- ✅ Variables CSS para consistencia de colores
+- ✅ Configuración de caché para assets
+- ✅ Headers de seguridad
+- ✅ Configuración SPA para React Router
 
 ## 🙏 Acknowledgments
 

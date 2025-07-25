@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 // Component imports
+import Header from 'components/ui/Header';
 import HeroSection from './components/HeroSection';
 import HeritageTimeline from './components/HeritageTimeline';
 import SpacesShowcase from './components/SpacesShowcase';
@@ -67,16 +68,29 @@ const LandingPage = () => {
 
   // Handle explore story scroll
   const handleExploreStory = () => {
-    scrollToSection('heritage-section');
+    scrollToSection('heritage');
   };
 
-  // Scroll to top on mount
+  // Scroll to top on mount and listen for booking form events
   useEffect(() => {
     window.scrollTo(0, 0);
+    
+    const handleOpenBookingForm = () => {
+      handleCheckAvailability();
+    };
+    
+    window.addEventListener('openBookingForm', handleOpenBookingForm);
+    
+    return () => {
+      window.removeEventListener('openBookingForm', handleOpenBookingForm);
+    };
   }, []);
 
   return (
     <div className="min-h-screen bg-[var(--color-background)]">
+      {/* Header */}
+      <Header />
+
       {/* Hero Section */}
       <HeroSection 
         onCheckAvailability={handleCheckAvailability}
@@ -84,37 +98,37 @@ const LandingPage = () => {
       />
 
       {/* Heritage Timeline Section */}
-      <div id="heritage-section">
+      <div id="heritage">
         <HeritageTimeline />
       </div>
 
       {/* Spaces Showcase Section */}
-      <div id="spaces-section">
+      <div id="spaces">
         <SpacesShowcase onBookRoom={handleBookRoom} />
       </div>
 
       {/* Photo Gallery Section */}
-      <div id="gallery-section">
+      <div id="gallery">
         <PhotoGallery />
       </div>
 
       {/* Philosophy & Sustainability Section */}
-      <div id="philosophy-section">
+      <div id="experience">
         <PhilosophySection />
       </div>
 
       {/* Testimonials Section */}
-      <div id="testimonials-section">
+      <div id="testimonials">
         <TestimonialsCarousel />
       </div>
 
       {/* Location & Map Section */}
-      <div id="location-section">
+      <div id="location">
         <LocationMap />
       </div>
 
       {/* Contact Section */}
-      <div id="contact-section">
+      <div id="contact">
         <ContactSection />
       </div>
 

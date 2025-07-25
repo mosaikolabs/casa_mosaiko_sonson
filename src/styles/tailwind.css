@@ -1,106 +1,59 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    /* Primary Colors */
-    --color-primary: #D2691E; /* terra-cotta */
-    --color-primary-foreground: #FFFFFF; /* white */
-    
-    /* Secondary Colors */
-    --color-secondary: #8B7D6B; /* stone-gray */
-    --color-secondary-foreground: #FFFFFF; /* white */
-    
-    /* Accent Colors */
-    --color-accent: #CD7F32; /* bronze */
-    --color-accent-foreground: #FFFFFF; /* white */
-    
-    /* Background Colors */
-    --color-background: #FAF0E6; /* natural-linen */
-    --color-foreground: #2F2F2F; /* aged-black */
-    
-    /* Surface Colors */
-    --color-card: #FFFFFF; /* pure-white */
-    --color-card-foreground: #2F2F2F; /* aged-black */
-    --color-popover: #FFFFFF; /* pure-white */
-    --color-popover-foreground: #2F2F2F; /* aged-black */
-    
-    /* Muted Colors */
-    --color-muted: #F5F5DC; /* beige */
-    --color-muted-foreground: #8B7D6B; /* stone-gray */
-    
-    /* Border and Input */
-    --color-border: #8B7D6B; /* stone-gray */
-    --color-input: #FFFFFF; /* white */
-    --color-ring: #D2691E; /* terra-cotta */
-    
-    /* Status Colors */
-    --color-success: #228B22; /* forest-green */
-    --color-success-foreground: #FFFFFF; /* white */
-    --color-warning: #FF8C00; /* warm-orange */
-    --color-warning-foreground: #FFFFFF; /* white */
-    --color-error: #DC143C; /* crimson */
-    --color-error-foreground: #FFFFFF; /* white */
-    --color-destructive: #DC143C; /* crimson */
-    --color-destructive-foreground: #FFFFFF; /* white */
-    
-    /* Text Colors */
-    --color-text-primary: #2F2F2F; /* aged-black */
-    --color-text-secondary: #8B7D6B; /* stone-gray */
-  }
+:root {
+  /* Primary Colors */
+  --color-primary: #D2691E; /* terra-cotta */
+  --color-primary-foreground: #FFFFFF;
+  
+  /* Secondary Colors */
+  --color-secondary: #8B7355; /* stone-gray */
+  --color-secondary-foreground: #FFFFFF;
+  
+  /* Accent Colors */
+  --color-accent: #CD7F32; /* bronze */
+  --color-accent-foreground: #FFFFFF;
+  
+  /* Background Colors */
+  --color-background: #F5F5DC; /* natural-linen */
+  --color-foreground: #2F2F2F; /* aged-black */
+  
+  /* Surface Colors */
+  --color-card: #FFFFFF; /* pure-white */
+  --color-card-foreground: #2F2F2F; /* aged-black */
+  --color-popover: #FFFFFF; /* pure-white */
+  --color-popover-foreground: #2F2F2F; /* aged-black */
+  
+  /* Muted Colors */
+  --color-muted: #F5F5DC; /* beige */
+  --color-muted-foreground: #8B7355; /* stone-gray */
+  
+  /* Border and Input */
+  --color-border: #8B7355; /* stone-gray */
+  --color-input: #FFFFFF;
+  --color-ring: #D2691E; /* terra-cotta */
+  
+  /* Status Colors */
+  --color-success: #228B22; /* forest-green */
+  --color-success-foreground: #FFFFFF;
+  --color-warning: #FF8C00; /* warm-orange */
+  --color-warning-foreground: #FFFFFF;
+  --color-error: #DC143C; /* crimson */
+  --color-error-foreground: #FFFFFF;
+  --color-destructive: #DC143C; /* crimson */
+  --color-destructive-foreground: #FFFFFF;
+  
+  /* Text Colors */
+  --color-text-primary: #2F2F2F; /* aged-black */
+  --color-text-secondary: #8B7355; /* stone-gray */
 }
 
 @layer base {
   * {
     @apply border-border;
   }
-  
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', sans-serif;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
-  }
-}
-
-@layer utilities {
-  .font-playfair {
-    font-family: 'Playfair Display', serif;
-  }
-  
-  .font-inter {
-    font-family: 'Inter', sans-serif;
-  }
-  
-  .shadow-heritage {
-    box-shadow: 0 4px 12px rgba(210, 105, 30, 0.15);
-  }
-  
-  .shadow-card {
-    box-shadow: 0 8px 24px rgba(47, 47, 47, 0.08);
-  }
-  
-  .transition-heritage {
-    transition: all 250ms ease-out;
-  }
-  
-  .fade-in {
-    animation: fadeIn 300ms ease-out;
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
   }
 }

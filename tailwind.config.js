@@ -74,10 +74,10 @@ module.exports = {
       },
       
       fontFamily: {
-        'playfair': ['Playfair Display', 'serif'],
+        'playfair': ['Inter', 'sans-serif'],
         'inter': ['Inter', 'sans-serif'],
         'sans': ['Inter', 'sans-serif'],
-        'serif': ['Playfair Display', 'serif']
+        'serif': ['Inter', 'sans-serif']
       },
       
       fontSize: {
